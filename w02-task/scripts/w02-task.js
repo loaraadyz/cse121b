@@ -19,7 +19,6 @@ yearElement.textContent = `${currentYear}`;
 imageElement.setAttribute('src', profilePicture);
 imageElement.setAttribute ('alt',`Profile Image of ${fullName}`);
 
-
 /* Step 5 - Array */
 const favoriteFoods = ["Polvoron","Adobo","Longganisa","Avocado","Dinengdeng"];
 foodElement.innerHTML = favoriteFoods;
@@ -33,9 +32,5 @@ foodElement.innerHTML += `<br>${favoriteFoods}`;
 
 favoriteFoods.pop();
 foodElement.innerHTML += `<br>${favoriteFoods}`;
-
-
-
-
 
 
