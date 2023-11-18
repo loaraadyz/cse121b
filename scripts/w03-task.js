@@ -58,7 +58,6 @@ const getTotalButton = document.getElementById("getTotal");
 const totalSpan = document.getElementById("total");
 
 getTotalButton.addEventListener("click", () => {
-
   const subtotalValue = parseFloat(subtotal.value);
   const isMember = membership.checked;
   const totalAmount = isMember ? subtotalValue * 0.85 : subtotalValue;
