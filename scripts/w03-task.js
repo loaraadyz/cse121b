@@ -6,7 +6,6 @@ function add(number1, number2){
     return number1 + number2;
 }
 
-
 function addNumbers(){
     let addNumber1 = Number(document.querySelector('#add1').value);
     let addNumber2 = Number(document.querySelector('#add2').value);
@@ -14,7 +13,6 @@ function addNumbers(){
 }
 
 document.querySelector('#addNumbers').addEventListener('click',addNumbers);
-
 
 /* Function Expression - Subtract Numbers */
 const subtract = function (number1, number2){
