@@ -52,17 +52,40 @@ const divideNumbers = () => {
 document.querySelector('#divideNumbers').addEventListener('click', divideNumbers);
 
 /* Decision Structure */
+const subtotal = document.getElementById("subtotal");
+const membership = document.getElementById("member");
+const getTotalButton = document.getElementById("getTotal");
+const totalSpan = document.getElementById("total");
 
+getTotalButton.addEventListener("click", () => {
+
+  const subtotalValue = parseFloat(subtotal.value);
+  const isMember = membership.checked;
+  const totalAmount = isMember ? subtotalValue * 0.85 : subtotalValue;
+  totalSpan.textContent = `Total: $${totalAmount.toFixed(2)}`;
+}); 
 
 /* ARRAY METHODS - Functional Programming */
 /* Output Source Array */
+let numbersArray = [1,2,3,4,5,6,7,8,9,10,11,12,13];
+document.querySelector('#array').textContent = numbersArray;
 
 /* Output Odds Only Array */
-
+document.querySelector('#odds').textContent = numbersArray.filter((num) => num % 2 ===1);
 /* Output Evens Only Array */
-
+document.querySelector('#evens').textContent = numbersArray.filter((num) => num % 2 ===0);
 /* Output Sum of Org. Array */
+document.querySelector('#sumOfArray').textContent = numbersArray.reduce(sumFunction);
 
+function sumFunction(total, num){
+    return total + num;
+}
 /* Output Multiplied by 2 Array */
+document.querySelector('#multiplied').textContent = numbersArray.map(doubleFunction);
+
+function doubleFunction(x){
+    return x*2;
+}
 
 /* Output Sum of Multiplied by 2 Array */
+document.querySelector('#sumOfMultiplied').textContent = numbersArray.map(doubleFunction).reduce(sumFunction);
